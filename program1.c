@@ -11,6 +11,11 @@ int main() {
     printf("Введите Xнач, Xкон, dX: ");
     if (scanf("%lf %lf %lf", &x_start, &x_end, &dx) != 3) return 1;
 
+    if (dx <= 0) {
+    printf("Ошибка: dX должен быть больше 0.\n");
+    return 1;
+    }
+
     int A_c = (int)a;
     int B_c = (int)b;
     int C_c = (int)c;
